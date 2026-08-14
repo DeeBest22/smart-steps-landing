@@ -11,7 +11,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Prepare for JAMB/UTME with expert tutors, a proven curriculum, and technology-driven learning. Mathematics, English, Physics, Chemistry, Biology and more.",
+          "Prepare for JAMB/UTME with expert tutors, a proven curriculum, and technology-driven learning. Mathematics, English, Physics, Chemistry, and Biology.",
       },
       {
         property: "og:title",
@@ -136,9 +136,6 @@ function Index() {
               <button className="rounded-xl bg-primary px-8 py-4 text-lg font-bold text-primary-foreground shadow-lg shadow-primary/20 transition-transform hover:scale-[1.02]">
                 Enroll Now
               </button>
-              <button className="rounded-xl border border-border bg-card px-8 py-4 text-lg font-bold text-foreground transition-colors hover:bg-accent">
-                Watch Demo
-              </button>
             </div>
             <div className="mt-10 flex items-center gap-4">
               <div className="flex -space-x-3">
@@ -206,16 +203,6 @@ function Index() {
               );
             })}
 
-            {/* CTA Card */}
-            <div className="flex flex-col items-center justify-center rounded-2xl bg-brand-navy p-8 text-center text-white">
-              <h3 className="font-heading text-xl">More Subjects...</h3>
-              <p className="mb-6 mt-4 text-sm text-white/70">
-                We cover 12+ UTME subjects including Government, CRK, and Accounts.
-              </p>
-              <button className="w-full rounded-xl bg-primary py-3 font-bold text-primary-foreground transition-colors hover:bg-primary/90">
-                View All Subjects
-              </button>
-            </div>
           </div>
         </div>
       </section>
@@ -278,11 +265,14 @@ function Index() {
       {/* Footer */}
       <footer className="border-t border-border py-12">
         <div className="mx-auto flex max-w-7xl flex-col items-center gap-6 px-6 md:flex-row md:justify-between">
-          <div className="flex items-center gap-2">
-            <div className="flex size-6 items-center justify-center rounded bg-brand-navy text-[10px] font-bold text-white">
-              S
-            </div>
-            <span className="font-heading text-sm font-bold">Smart Steps Tutorial</span>
+          <div className="flex items-center">
+            <img
+              src={logoAsset.url}
+              alt="Smart Steps Tutorial"
+              width={140}
+              height={36}
+              className="h-9 w-auto"
+            />
           </div>
           <p className="text-xs text-muted-foreground">
             &copy; {new Date().getFullYear()} Smart Steps Tutorial. One Smart Step Closer to
