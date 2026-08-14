@@ -78,11 +78,14 @@ function Index() {
       {/* Navigation */}
       <nav className="sticky top-0 z-50 border-b border-brand-navy/5 bg-white/80 backdrop-blur-md">
         <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6">
-          <Link to="/" className="flex items-center gap-2">
-            <div className="flex size-8 items-center justify-center rounded-lg bg-primary font-bold text-primary-foreground">
-              S
-            </div>
-            <span className="font-heading text-xl tracking-tight">SmartSteps</span>
+          <Link to="/" className="flex items-center">
+            <img
+              src={logoAsset.url}
+              alt="Smart Steps Tutorial"
+              width={180}
+              height={48}
+              className="h-12 w-auto"
+            />
           </Link>
           <div className="hidden items-center gap-8 md:flex">
             <a
