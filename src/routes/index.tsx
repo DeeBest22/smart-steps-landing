@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, BookOpen, Calculator, FlaskConical, Dna, Languages } from "lucide-react";
 
 import heroStudent from "@/assets/hero-student.jpg";
-import logoAsset from "@/assets/steps_smart.png.asset.json";
+import logoAsset from "@/assets/steps_smart.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
