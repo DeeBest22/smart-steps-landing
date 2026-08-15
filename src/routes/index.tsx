@@ -138,14 +138,8 @@ function Index() {
               </button>
             </div>
             <div className="mt-10 flex items-center gap-4">
-              <div className="flex -space-x-3">
-                <div className="size-10 rounded-full border-2 border-white bg-slate-200" />
-                <div className="size-10 rounded-full border-2 border-white bg-slate-300" />
-                <div className="size-10 rounded-full border-2 border-white bg-slate-400" />
-              </div>
-              <p className="text-sm font-medium text-muted-foreground">
-                Joined by 12,000+ students this month
-              </p>
+           
+          
             </div>
           </div>
           <div className="relative">
@@ -249,7 +243,7 @@ function Index() {
             <div className="relative z-10">
               <h2 className="font-heading text-4xl">Ready to secure your admission?</h2>
               <p className="mx-auto mb-10 mt-6 max-w-md text-lg text-primary-foreground/80">
-                Join thousands of students who have crossed the gap between potential and
+                Join students who have crossed the gap between potential and
                 achievement.
               </p>
               <button className="rounded-full bg-white px-10 py-4 text-lg font-extrabold text-primary shadow-2xl transition-all hover:shadow-xl">
@@ -267,7 +261,7 @@ function Index() {
         <div className="mx-auto flex max-w-7xl flex-col items-center gap-6 px-6 md:flex-row md:justify-between">
           <div className="flex items-center">
             <img
-              src={logoAsset.url}
+              src={logoAsset}
               alt="Smart Steps Tutorial"
               width={140}
               height={36}
