@@ -7,7 +7,7 @@ import logoAsset from "@/assets/steps_smart.png";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Smart Steps Tutorial — JAMB/UTME Exam Prep in Nigeria" },
+      { title: "Smart Steps Tutorial" },
       {
         name: "description",
         content:
