@@ -1,5 +1,14 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, BookOpen, Calculator, FlaskConical, Dna, Languages } from "lucide-react";
+import {
+  ArrowRight,
+  BookOpen,
+  Calculator,
+  FlaskConical,
+  Dna,
+  Languages,
+  Megaphone,
+  Users,
+} from "lucide-react";
 
 import heroStudent from "@/assets/hero-student.jpg";
 import logoAsset from "@/assets/steps_smart.png";
@@ -15,7 +24,7 @@ export const Route = createFileRoute("/")({
       },
       {
         property: "og:title",
-        content: "Smart Steps Tutorial — One Smart Step Closer to Success",
+        content: "Smart Steps Tutorial: One Smart Step Closer to Success",
       },
       {
         property: "og:description",
@@ -28,6 +37,16 @@ export const Route = createFileRoute("/")({
   }),
   component: Index,
 });
+
+const WHATSAPP_GROUP_URL = "https://chat.whatsapp.com/EnnHkoAE9xU6uaYvaSwAb3?s=sh&p=a&iam=2";
+const WHATSAPP_CHANNEL_URL = "https://whatsapp.com/channel/0029VbB0HsjAYlUFw2erTs2T";
+
+const highlights = [
+  "Free JAMB/UTME tips, past-question drills, and study timetables",
+  "Live tutorials in Mathematics, English, Physics, Chemistry, and Biology",
+  "Daily updates on registration, exam dates, and JAMB news",
+  "Ask questions and get answers from tutors and fellow students",
+];
 
 const subjects = [
   {
@@ -106,12 +125,83 @@ function Index() {
             >
               Pricing
             </a>
-            <button className="rounded-full bg-brand-navy px-6 py-2.5 text-sm font-semibold text-white transition-all hover:bg-primary">
-              Start Learning
-            </button>
+            <a
+              href={WHATSAPP_GROUP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-full bg-brand-navy px-6 py-2.5 text-sm font-semibold text-white transition-all hover:bg-primary"
+            >
+              Join on WhatsApp
+            </a>
           </div>
         </div>
       </nav>
+
+      {/* WhatsApp Join Section */}
+      <section id="join" className="bg-brand-navy px-6 py-14 text-white md:py-20">
+        <div className="mx-auto grid max-w-7xl items-center gap-10 md:grid-cols-2">
+          <div>
+            <h2 className="font-heading text-3xl leading-tight md:text-5xl">
+              Join Smart Steps Tutorial on WhatsApp
+            </h2>
+            <p className="mt-5 max-w-lg text-base leading-relaxed text-white/80 md:text-lg">
+              Smart Steps Tutorial helps Nigerian students prepare for JAMB/UTME with expert
+              tutors, a proven curriculum, and technology-driven learning. Everything happens on
+              WhatsApp, so join now to get started.
+            </p>
+            <ul className="mt-6 space-y-3">
+              {highlights.map((item) => (
+                <li key={item} className="flex items-start gap-3 text-sm text-white/90 md:text-base">
+                  <span className="mt-2 size-2 shrink-0 rounded-full bg-[#25D366]" />
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="grid gap-4">
+            <a
+              href={WHATSAPP_GROUP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex items-center gap-4 rounded-2xl bg-[#25D366] p-6 text-[#073b1c] shadow-xl transition-transform hover:scale-[1.02] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
+            >
+              <span className="flex size-14 shrink-0 items-center justify-center rounded-xl bg-white/30">
+                <Users className="size-7" />
+              </span>
+              <span className="flex-1">
+                <span className="block font-heading text-xl font-extrabold">
+                  Join Our Elite Squad Group
+                </span>
+                <span className="block text-sm font-medium opacity-80">
+                  Chat, practise, and learn with other students
+                </span>
+              </span>
+              <ArrowRight className="size-5 transition-transform group-hover:translate-x-1" />
+            </a>
+
+            <a
+              href={WHATSAPP_CHANNEL_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex items-center gap-4 rounded-2xl border-2 border-[#25D366] p-6 text-white transition-transform hover:scale-[1.02] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
+            >
+              <span className="flex size-14 shrink-0 items-center justify-center rounded-xl bg-[#25D366]/20 text-[#25D366]">
+                <Megaphone className="size-7" />
+              </span>
+              <span className="flex-1">
+                <span className="block font-heading text-xl font-extrabold">
+                  Follow Our WhatsApp Channel
+                </span>
+                <span className="block text-sm font-medium text-white/70">
+                  Get announcements and study tips as they drop
+                </span>
+              </span>
+              <ArrowRight className="size-5 text-[#25D366] transition-transform group-hover:translate-x-1" />
+            </a>
+          </div>
+        </div>
+      </section>
 
       {/* Hero Section */}
       <header className="relative overflow-hidden pb-24 pt-16 md:pb-32 md:pt-24">
@@ -133,9 +223,22 @@ function Index() {
               proven curriculum with technology-driven learning to unlock your university dreams.
             </p>
             <div className="flex flex-col gap-4 sm:flex-row">
-              <button className="rounded-xl bg-primary px-8 py-4 text-lg font-bold text-primary-foreground shadow-lg shadow-primary/20 transition-transform hover:scale-[1.02]">
-                Enroll Now
-              </button>
+              <a
+                href={WHATSAPP_GROUP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-xl bg-primary px-8 py-4 text-center text-lg font-bold text-primary-foreground shadow-lg shadow-primary/20 transition-transform hover:scale-[1.02]"
+              >
+                Join the Group
+              </a>
+              <a
+                href={WHATSAPP_CHANNEL_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-xl border border-border px-8 py-4 text-center text-lg font-bold text-foreground transition-colors hover:border-primary hover:text-primary"
+              >
+                Follow the Channel
+              </a>
             </div>
             <div className="mt-10 flex items-center gap-4">
            
@@ -246,9 +349,14 @@ function Index() {
                 Join students who have crossed the gap between potential and
                 achievement.
               </p>
-              <button className="rounded-full bg-white px-10 py-4 text-lg font-extrabold text-primary shadow-2xl transition-all hover:shadow-xl">
-                Get Started Today
-              </button>
+              <a
+                href={WHATSAPP_GROUP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block rounded-full bg-white px-10 py-4 text-lg font-extrabold text-primary shadow-2xl transition-all hover:shadow-xl"
+              >
+                Join on WhatsApp
+              </a>
             </div>
             <div className="absolute -right-12 -top-12 size-48 rounded-full bg-white/10"></div>
             <div className="absolute -bottom-12 -left-12 size-64 rounded-full bg-black/10"></div>
